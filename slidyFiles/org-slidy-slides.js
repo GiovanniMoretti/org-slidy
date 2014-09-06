@@ -1,7 +1,9 @@
-function formatSlideTitle(i) {
+ function formatSlideTitle(i) {
     var a = $('<h1 />').append($('<span />').append($(this).contents()));
     $(this).replaceWith(a);
+  
 }
+
 
 const tagTranslator = {
     "Incremental": "incremental",
@@ -19,6 +21,7 @@ function interpretTags() {
                                        .siblings("ul")
                                        .addClass(tagTranslator[$(this).text()]);
                                });
+
     $("span.tag").remove();
 }
 
@@ -30,8 +33,12 @@ function rewriteExternalLinks() {
 }
 
 $(document).ready(function () {
+                      $("div.outline-3").addClass("incremental"); /* GSM */
+                      $("div.lbox").addClass("incremental"); /* GSM */
+                      $("div.rbox").addClass("incremental"); /* GSM */
                       $("div.outline-2").addClass("slide");
                       $("div.slide h2").each(formatSlideTitle);
+
                       interpretTags();
                       rewriteExternalLinks();
                   });
