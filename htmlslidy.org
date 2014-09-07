@@ -4,7 +4,7 @@
 
 # Turn off the title as it interferes with the text. 
 #+title:
-#+OPTIONS: H:5 num:nil toc:nil \n:nil @:t ::t |:t ^:{} f:nil LaTeX:t 
+#+OPTIONS: H:5 num:nil toc:nil \n:nil @:t ::t |:t ^:{} f:nil LaTeX:t e:t
 
 #+BIND: org-html-head-include-default-style nil
 #+BIND: org-html-head-include-scripts nil
