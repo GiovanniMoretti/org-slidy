@@ -52,7 +52,7 @@ var w3c_slidy = {
   selected_text_len: 0, // length of drag selection on document
   view_all: 0,  // 1 to view all slides + handouts
   want_toolbar: true,  // user preference to show/hide toolbar
-  mouse_click_enabled: true, // enables left click for next slide
+  mouse_click_enabled: false, // enables left click for next slide  // changed to false by GSM
   scroll_hack: 0, // IE work around for position: fixed
   disable_slide_click: false,  // used by clicked anchors
 
@@ -127,7 +127,11 @@ var w3c_slidy = {
       this.want_toolbar = 0;
     }
 
-    // work around for opera bug
+    if (this.keyboardless) {
+       // If on a tablet or phone, just exit. This will display presentation in flowing view
+       // return false;
+       this.set_visibility_all_incremental("visible");}
+        // work around for opera bug
     this.is_xhtml = (document.body.tagName == "BODY" ? false : true);
 
     if (this.slides.length > 0)
@@ -183,6 +187,20 @@ var w3c_slidy = {
     //if (!document.body.onclick)
     //  document.body.onclick = function () { };
 
+    // ===================================================================================
+    // On mobile devices ipad/iphone/android show all pages in a scrolling view, otherwise
+    // incremental progression within lectures slides become really annoying.
+    // GSM
+
+    if (this.keyboardless) 
+      {
+         this.set_visibility_all_incremental("visible");
+//        this.show_all_slides();
+//        this.hide_toolbar();
+//        this.view_all = 1;
+       }
+
+    // ===================================================================================
     this.single_slide_view();
 
     //this.set_location();
@@ -457,7 +475,7 @@ var w3c_slidy = {
     if (e.touches.length > 1)
       return;
 
-    e.preventDefault();
+//    e.preventDefault();
     var touch = e.touches[0];
     this.delta_x = touch.pageX - this.pageX;
     this.delta_y = touch.pageY - this.pageY;
@@ -474,7 +492,8 @@ var w3c_slidy = {
     var dy = this.delta_y;
     var abs_dx = Math.abs(dx);
     var abs_dy = Math.abs(dy);
-
+ 
+    // alert("Delay: " + delay + ' abs_dX = ' + abs_dx + ' abs_dY = ' + abs_dy); //GSM
     if (delay < 500 && (abs_dx > 100 || abs_dy > 100))
     {
       if (abs_dx > 0.5 * abs_dy)
@@ -486,11 +505,12 @@ var w3c_slidy = {
         else
           w3c_slidy.previous_slide(true);
       }
-      else if (abs_dy > 2 * abs_dx)
-      {
-        e.preventDefault();
-        w3c_slidy.toggle_table_of_contents();
-      }
+// GSM Get rid of Y gesture as it prevents vertical scrolling which can be handy   
+//    else if (abs_dy > 2 * abs_dx)
+//      {
+//        e.preventDefault();
+//        w3c_slidy.toggle_table_of_contents();
+//      }
     }
   },
 
@@ -1213,6 +1233,10 @@ var w3c_slidy = {
   // either directly or indirectly for use of w3c_slidy vs this
   show_slide_number: function () {
     var timer = w3c_slidy.get_timer();
+
+    if (this.keyboardless)   //GSM
+       this.set_visibility_all_incremental("visible");
+
     w3c_slidy.slide_number_element.innerHTML = timer + w3c_slidy.localize("slide") + " " +
            (w3c_slidy.slide_number + 1) + "/" + w3c_slidy.slides.length;
   },
