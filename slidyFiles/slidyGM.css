@@ -11,17 +11,21 @@ body {margin-left: 1em;
 
 div.indent {margin-left:3em; margin-top:1em; margin-bottom:1em; }
 
-img {margin-left:2em; }
+img {
+  margin-left:0.5em; 
+  max-width  : 95%;
+  max-height : 95%;
+}
 
 div.lbox {
   float: left;
   height: 50%; 
   width: 45%;
-  margin-top   : 1.5em;
+  margin-top   : 1em;
   margin-left  : 1em;
   margin-bottom: 1em;
 
-  border-radius   :  1em; 
+  border-radius:  1em; 
   border:1px solid silver;
   background:#F0F0F0;
   overflow  :auto;
@@ -33,7 +37,7 @@ div.rbox {
   float: right;
   height: 50%; 
   width: 45%;
-  margin-top: 1.5em;
+  margin-top  : 1em;
   margin-right:1em;
   margin-bottom:1em;
 
@@ -123,7 +127,7 @@ body b { color: #0000B0; }
     margin-top      : 2em;
     margin-left     : 1em;
     margin-right    : 1em;
-    margin-bottom:  : 1em;
+    margin-bottom   : 1em;
     padding-top     : 1em;
     padding-bottom  : 1em;
     background-color:  #006;
@@ -169,12 +173,16 @@ div.slide h1 {
     background-color:#FFFFFF;
   }  
 
+  img {
+    max-width: 95%;      /* keep it on the page */
+  }
+
   div.slide h1 {
     padding : 3pt 3pt 3pt 3pt;
     display: block;
     font-size: 14pt;
     line-height: 1.2em;
-    border-bottom: solid 1px color;
+    border-bottom   : solid 1px black;
     color           : white;
     background-color: #606;
     page-break-after: avoid;
@@ -217,13 +225,13 @@ div.slide h1 {
     page-break-inside: avoid;
     page-break-after : avoid;            /* was Always */
     background-color : #FFFFFF;  
-    margin-bottom    : 0em;    // Bottom margin
+    margin-bottom    : 0em;             /* Bottom margin */
     padding-top      : 0em;
     margin-top       : 0em;
   } 
 
   /* :first-child isn't reliable for print media */
-  div.slide.first-slide { page-break-before: avoid }
+  div.slide.first-slide { page-break-before: avoid; }
 
   p, ul, ol, blockquote, dl, li, td { font-size: 11pt; }
 

@@ -1,0 +1,1 @@
+rsync -rv ~/.emacs.d/org-slidy/slidyFiles/  giovanni@madwizards.com:/var/www/html/slidyFiles
