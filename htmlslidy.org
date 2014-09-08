@@ -9,7 +9,7 @@
 #+BIND: org-html-head-include-default-style nil
 #+BIND: org-html-head-include-scripts nil
 
-#+BIND: org-html-head "<!-- configuration parameters --> <meta name='font-size-adjustment' content='4' /> <!-- style sheet links --> <link rel='stylesheet' href='slidyFiles/slidy.css' type='text/css' /><link rel='stylesheet' href='slidyFiles/slidyGM.css' type='text/css' /> <!-- HTMTLSLIDY JS --> </script> <script src='slidyFiles/slidy.js'  type='text/javascript'> </script> <script src='slidyFiles/jquery.js' type='text/javascript'> </script> <script src='slidyFiles/org-slidy-slides.js' type='text/javascript'></script>"
+#+BIND: org-html-head "<!-- configuration parameters --> <meta name='font-size-adjustment' content='4' /> <!-- style sheet links --> <link rel='stylesheet' href='http://madwizards.com/slidyFiles/slidy.css' type='text/css' /><link rel='stylesheet' href='http://madwizards.com/slidyFiles/slidyGM.css' type='text/css' /> <!-- HTMTLSLIDY JS --> </script> <script src='http://madwizards.com/slidyFiles/slidy.js'  type='text/javascript'> </script> <script src='http://madwizards.com/slidyFiles/jquery.js' type='text/javascript'> </script> <script src='http://madwizards.com/slidyFiles/org-slidy-slides.js' type='text/javascript'></script>"
 
 #+BIND: org-html-head-extra ""
 
