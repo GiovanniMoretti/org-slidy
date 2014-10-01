@@ -1,0 +1,60 @@
+#+FILETAGS: :teaching:171:
+
+#+LANGUAGE:  en
+#+OPTIONS:   H:5 num:nil toc:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t timestamp:nil
+#+OPTIONS:   LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc 
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+
+#+HTML_HEAD: <style> h1, h2,h3, h4 {margin-top: 1em; font-family:arial;} </style>
+#+HTML_HEAD: <style> h2,h3         {background-color: #000000; color:#FFFFFF;  } </style>
+
+# Python Source & Output blocks
+#+HTML_HEAD: <style> 
+#+HTML_HEAD:   pre.src               {background-color: #FFFFCC; font-size:100%; font-family: Courier New, Courier, monospace;} 
+#+HTML_HEAD:   pre.src-python        {margin-top: 1.5em; border-width:1px; border-style:solid; font-size:95%;} 
+#+HTML_HEAD:   pre.src-python:before {font-size: 90%;}
+#+HTML_HEAD:   pre.src-python:before { content: 'Python'; }
+#+HTML_HEAD:   pre.example           {background-color: #CCFFCC; font-size:100%; font-family: Courier New, Courier, monospace;} 
+#+HTML_HEAD: </style> 
+
+#+HTML_HEAD: <style> 
+#+HTML_HEAD:    body  {font-family: arial, helvetica, sans;}
+#+HTML_HEAD:    table {margin-left: 1cm; margin-top: 0.5cm; margin-bottom: 0.2cm;}
+#+HTML_HEAD:    h1 {text-align:center;color: #000000; background-color:#CCCCCC;margin-bottom:1em; font-family: arial, sans-serif; ;font-size:150%}
+#+HTML_HEAD:    h2 {font-size:135%;color:#000; background-color:#BBB; font-family: arial, sans-serif;}
+#+HTML_HEAD:    h3 {font-size:120%;color:#126; background-color:#FFF;}
+#+HTML_HEAD:    h2,h3 {margin-top: 0.8em; border-bottom:2px solid gray;}
+
+#+HTML_HEAD:    p       {font-size:100%}
+#+HTML_HEAD:    li,dd   {margin-bottom:0.5em;}
+#+HTML_HEAD:    .org-dl {margin-left:1em;}
+
+
+#+HTML_HEAD:    .figure p { text-align: left; }
+
+#+HTML_HEAD:    img   {text-align: left; margin-left:3em; margin-right:2em; border: 1px solid #888;}
+
+#+HTML_HEAD:    .left {padding-left:0.5em; padding-right:0.5em;}
+
+#+HTML_HEAD:    pre.src:before { display: inline;}  /* Always display little [Python] box on code*/
+#+HTML_HEAD: </style>
+
+#=============================================================================================
+# Print-only CSS
+
+#+HTML_HEAD: <style>
+#+HTML_HEAD:    @media print {
+#+HTML_HEAD:      h1, h2, h3, h4 { text-align:left; color:#000000; background-color:#FFFFFF;} 
+#+HTML_HEAD:      body           { background:white; font-size:11pt; font-family: times new roman, times, sans;}
+#+HTML_HEAD:      pre, pre.src   { background:white; font-size:10pt; font-family: Courier New, Courier, monospace;}
+#+HTML_HEAD:      .example       { color:#000000; background-color:#aaa;} 
+
+#+HTML_HEAD:      img            {width:70%; }
+#+HTML_HEAD:      h1, h2         {page-break-before : always; }
+#+HTML_HEAD:    }
+#+HTML_HEAD: </style>
+#+HTML_HEAD_EXTRA: <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
