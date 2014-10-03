@@ -77,7 +77,11 @@ div.hbox {
       background-color: #FFD; 
  }
 
-.verse {font-style: italic; margin-left:3em; margin-right:3em; color:#006;}
+.quotation {font-style: italic; font-family: georgia, serif; margin-left:3em; margin-right:3em; color:#006;}
+.quote     {font-style: italic; font-family: georgia, serif; margin-left:3em; margin-right:3em; color:#006;}
+
+.verse     {font-style: italic; margin-left:3em; margin-right:3em; color:#006;}
+
 
 ul li   {margin-left: 1.25em; }
 
