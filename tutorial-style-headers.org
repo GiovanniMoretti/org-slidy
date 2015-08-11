@@ -22,12 +22,13 @@
 #+HTML_HEAD: </style> 
 
 #+HTML_HEAD: <style> 
-#+HTML_HEAD:    body  {font-family: arial, helvetica, sans;}
+#+HTML_HEAD:    body  {font-family: arial, helvetica, sans;	line-height: 1;}
 #+HTML_HEAD:    table {margin-left: 1cm; margin-top: 0.5cm; margin-bottom: 0.2cm;}
 #+HTML_HEAD:    h1 {text-align:center;color: #000000; background-color:#CCCCCC;margin-bottom:1em; font-family: arial, sans-serif; ;font-size:150%}
 #+HTML_HEAD:    h2 {font-size:135%;color:#000; background-color:#BBB; font-family: arial, sans-serif;}
 #+HTML_HEAD:    h3 {font-size:120%;color:#000; background-color:#FFF;}
-#+HTML_HEAD:    h2,h3 {margin-top: 0.8em; border-bottom:2px solid gray;}
+#+HTML_HEAD:    h2,h3 {margin-top: 1em; border-bottom:2px solid gray; padding-left: 0.5em; padding-top: 0.3em; padding-bottom:0.2em}
+#+HTML_HEAD:    h4,h5 {margin-top: 1.2em; padding-top: 0.2em; margin-bottom: 0em}
 
 #+HTML_HEAD:    p       {font-size:100%}
 #+HTML_HEAD:    li,dd   {margin-bottom:0.5em;}
